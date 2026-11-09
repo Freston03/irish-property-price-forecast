@@ -1,6 +1,6 @@
 # Irish Residential Property Price Forecast
 
-**Live app:** <[your-streamlit-link](https://irish-property-price-forecast-swxbjj9xmqeacc9m9fihlu.streamlit.app/)>
+**Live app:** <[Streamlit Link](https://irish-property-price-forecast-swxbjj9xmqeacc9m9fihlu.streamlit.app/)>
 
 Interactive dashboard that forecasts the Irish Residential Property Price Index
 12 months ahead, built from CSO data (table HPM09) with a SARIMA model.
