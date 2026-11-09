@@ -54,6 +54,3 @@ streamlit run app.py
 Central Statistics Office Ireland, Residential Property Price Index (HPM09),
 licensed CC BY 4.0.
 
-## Next steps
-- Add outside predictors (interest rates, unemployment) to the XGBoost model
-- County-level forecasts and RTB rent data
