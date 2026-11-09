@@ -16,19 +16,6 @@ def find(name):
     st.error(f"Could not find {name} in the repo.")
     st.stop()
 
-
-@st.cache_data
-def load():
-    hist = pd.read_csv(find("rppi_clean.csv"), index_col=0, parse_dates=True).iloc[:, 0]
-    fc = pd.read_csv(find("forecast.csv"), index_col=0, parse_dates=True)
-    by_win = pd.read_csv(find("mape_by_window.csv"), index_col=0)
-    nested = pd.read_csv(find("sarima_nested_windows.csv"), index_col=0)
-    return hist, fc, by_win, nested
-st.title("Irish Residential Property Price Forecast")
-st.caption("CSO Residential Property Price Index (HPM09) · SARIMA model · 12-month outlook")
-
-tab1, tab2, tab3 = st.tabs(["Forecast", "Model comparison", "Limitations"])
-
 @st.cache_data
 def load():
     hist = pd.read_csv(find("rppi_clean.csv"), index_col=0, parse_dates=True).iloc[:, 0]
