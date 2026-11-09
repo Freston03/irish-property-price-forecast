@@ -5,7 +5,8 @@
 Interactive dashboard that forecasts the Irish Residential Property Price Index
 12 months ahead, built from CSO data (table HPM09) with a SARIMA model.
 
-![Dashboard screenshot](<img width="1914" height="907" alt="Dashboard" src="https://github.com/user-attachments/assets/a787c0e0-fbb8-4b21-8df1-def4e01a3ce2" />
+![Dashboard screenshot](<img width="1914" height="907" alt="Dashboard" src="https://github.com/user-attachments/assets/6ddf028a-6aff-4b54-b4cf-38cc90876ee9"/>
+>
 )
 
 ## What it does
