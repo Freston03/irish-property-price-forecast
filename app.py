@@ -1,21 +1,29 @@
+from pathlib import Path
+
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
 st.set_page_config(page_title="Irish Property Price Forecast", layout="wide")
 
+BASE = Path(__file__).parent
+
+
+def find(name):
+    for p in (BASE / "data" / name, BASE / name):
+        if p.exists():
+            return p
+    st.error(f"Could not find {name} in the repo.")
+    st.stop()
+
 
 @st.cache_data
 def load():
-    hist = pd.read_csv("data/rppi_clean.csv", index_col=0, parse_dates=True).iloc[:, 0]
-    fc = pd.read_csv("data/forecast.csv", index_col=0, parse_dates=True)
-    by_win = pd.read_csv("data/mape_by_window.csv", index_col=0)
-    nested = pd.read_csv("data/sarima_nested_windows.csv", index_col=0)
+    hist = pd.read_csv(find("rppi_clean.csv"), index_col=0, parse_dates=True).iloc[:, 0]
+    fc = pd.read_csv(find("forecast.csv"), index_col=0, parse_dates=True)
+    by_win = pd.read_csv(find("mape_by_window.csv"), index_col=0)
+    nested = pd.read_csv(find("sarima_nested_windows.csv"), index_col=0)
     return hist, fc, by_win, nested
-
-
-hist, fc, by_win, nested = load()
-
 st.title("Irish Residential Property Price Forecast")
 st.caption("CSO Residential Property Price Index (HPM09) · SARIMA model · 12-month outlook")
 
