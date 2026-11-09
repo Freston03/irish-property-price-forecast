@@ -7,7 +7,7 @@ Interactive dashboard that forecasts the Irish Residential Property Price Index
 
 Dashboard : <img width="1914" height="907" alt="Dashboard" src="https://github.com/user-attachments/assets/6ddf028a-6aff-4b54-b4cf-38cc90876ee9"/>
 >
-)
+
 
 ## What it does
 - Shows the index history and a 12-month forecast with an uncertainty band
